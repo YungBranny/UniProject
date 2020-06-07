@@ -2,6 +2,12 @@
 
 
 #include "NPCDefaultAi.h"
+#include "Runtime/Engine/Classes/Engine/World.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
+#include "GameFramework/PlayerController.h"
+
+
 
 // Sets default values
 ANPCDefaultAi::ANPCDefaultAi()
@@ -15,6 +21,8 @@ ANPCDefaultAi::ANPCDefaultAi()
 void ANPCDefaultAi::BeginPlay()
 {
 	Super::BeginPlay();
+
+	UMaterialInstanceDynamic* const MaterialInstance = UMaterialInstanceDynamic::Create (GetMesh ()->GetMaterial (0), this);
 	
 }
 

@@ -26,6 +26,7 @@ void ANPCDefaultAi::BeginPlay()
 	if(material_instance)
 	{
 		material_instance->SetVectorParameterValue ("BodyColor", FLinearColor (1.0f, 0.0f, 0.f, 1.0f));
+		GetMesh()->SetMaterial (0, material_instance);
 	}
 	
 }

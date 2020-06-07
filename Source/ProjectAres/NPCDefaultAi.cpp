@@ -22,7 +22,11 @@ void ANPCDefaultAi::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UMaterialInstanceDynamic* const MaterialInstance = UMaterialInstanceDynamic::Create (GetMesh ()->GetMaterial (0), this);
+	UMaterialInstanceDynamic* const material_instance = UMaterialInstanceDynamic::Create (GetMesh ()->GetMaterial (0), this);
+	if(material_instance)
+	{
+		material_instance->SetVectorParameterValue ("BodyColor", FLinearColor (1.0f, 0.0f, 0.f, 1.0f));
+	}
 	
 }
 

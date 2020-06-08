@@ -15,7 +15,7 @@ public class ProjectAres : ModuleRules
             "Engine",
             "InputCore",
             "AIModule",
-            "GameplayTask",
+            "GameplayTasks",
             "NavigationSystem"
         });
 

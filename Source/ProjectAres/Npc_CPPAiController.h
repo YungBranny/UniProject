@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "Perception/AIPerceptionTypes.h"
 #include "Npc_CPPAiController.generated.h"
+
 
 /**
  * 
@@ -27,5 +29,12 @@ private:
 	class UBehaviorTree* behavior_tree;
 
 	class UBlackboardComponent* blackboard;
+
+	class UAISenseConfig_Sight* sight_config;
+
+	UFUNCTION ()
+	void onUpdated (TArray<AActor*>const& updatedActors);
+	
+	void setupPerceptionSystem ();
 	
 };
